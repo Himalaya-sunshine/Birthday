@@ -1,116 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Birthday Quiz 🎉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Quiz</title>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f2f2f2;
-      padding: 30px;
-      color: #333;
-    }
-    .container {
-      max-width: 700px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    label {
-      font-weight: bold;
-    }
-    button {
-      background: #4CAF50;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    #messageBox {
-      margin-top: 30px;
-      padding: 20px;
-      background: #e0f7fa;
-      border-left: 5px solid #00acc1;
-      border-radius: 10px;
-      display: none;
-      font-size: 18px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
 </head>
+
 <body>
   <div class="container">
-    <h2>🎂 Birthday Quiz 🎂</h2>
+    <h2 class="bitcount-grid-double">
+      <span class="cake">🎂</span> Birthday Quiz <span class="cake">🎂</span>
+    </h2>
     <p><i>You can describe any answer if you want 💬</i></p>
 
     <form id="quizForm">
       <label>Your Name:</label>
-      <input type="text" name="name" required />
+      <div class="input">
+        <input type="text" name="name" required />
+      </div>
 
       <label>Your Email:</label>
-      <input type="email" name="email" required />
+      <div class="input">
+        <input type="email" name="email" required />
+      </div>
 
-      <label>1. Mountain Personality – What best describes you?</label>
-      <input type="text" name="personality" required />
+      <label>1. Which Mountain best describes your Personality?</label>
+      <div class="input"><input type="text" name="personality" required /></div>
 
       <label>2. In which month were you born?</label>
-      <input type="text" name="birthdayMonth" required />
+      <div class="input"><input type="text" name="birthdayMonth" required /></div>
 
       <label>3. Your first crush? (It'll always be a secret 🤫)</label>
-      <input type="text" name="firstCrush" required />
+      <div class="input"><input type="text" name="firstCrush" required /></div>
 
       <label>4. Are you guys still friends?</label>
-      <input type="text" name="stillFriends" required />
+      <div class="input"><input type="text" name="stillFriends" required /></div>
 
       <label>5. Your boyfriend? (It'll always be a secret too 🤫)</label>
-      <input type="text" name="boyfriend" required />
+      <div class="input"><input type="text" name="boyfriend" required />
+      </div>
 
       <label>6. Your best friend?</label>
-      <input type="text" name="bestFriend" required />
+      <div class="input"><input type="text" name="bestFriend" required />
+      </div>
 
       <label>7. How is everyone doing in your family? (Rate on a scale of 1–5)</label>
-      <input type="number" name="familyStatus" min="1" max="5" required />
+      <div class="input"><input type="number" name="familyStatus" min="1" max="5" required /></div>
 
       <label>8. How happy are you? (Rate on a scale of 1–5)</label>
-      <input type="number" name="happiness" min="1" max="5" required />
+      <div class="input"><input type="number" name="happiness" min="1" max="5" required /></div>
 
-      <button type="submit">Submit</button>
+      <div class="btn"><button type="submit">Submit</button>
+      </div>
     </form>
 
-    <div id="messageBox">
-      🎉 <strong>Happy Birthday!</strong> 🎉<br><br>
-      On this special day, may the mountains sing your name, the winds carry your wishes, and life bring you joy as beautiful and adventurous as the Himalayas. May every dream you whisper today find its way into reality 🌸<br><br>
-      🌄 With love, from somewhere you’ll always be thought of 💫
-    </div>
-  </div>
-
-  <script>
-    emailjs.init("lnzedyoKuyojNG8_i");
-
-    document.getElementById("quizForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      emailjs.sendForm("service_yx7098h", "template_8fue4p6", this)
-        .then(() => {
-          document.getElementById("quizForm").reset();
-          document.getElementById("messageBox").style.display = "block";
-        }, (error) => {
-          alert("Something went wrong: " + JSON.stringify(error));
-        });
-    });
-  </script>
+    <script src="script.js"></script>
 </body>
+
 </html>

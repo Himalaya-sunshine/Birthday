@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.bitcount-grid-double {
+    font-family: "Bitcount Grid Double", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 50px;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "CRSV" 0.5,
+        "ELSH" 0,
+        "ELXP" 0;
+}
+
+.cake {
+    font-size: 25px;
+}
+
+body {
+    /* font-family: "Bitcount Grid Double", "Poppins", sans-serif; */
+    font-family: 'Segoe UI', sans-serif;
+    background: #f2f2f2;
+    padding: 30px;
+    color: #ffffff;
+    font-weight: thin;
+    background-color: #1a1a1a;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: rgb(62, 62, 62);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2.bitcount-grid-double {
+        font-size: 1.8rem;
+    }
+
+    button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h2.bitcount-grid-double {
+        font-size: 1.5rem;
+    }
+
+    input,
+    textarea {
+        font-size: 0.95rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+

@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.bitcount-grid-double {
+    font-family: "Bitcount Grid Double", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 50px;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "CRSV" 0.5,
+        "ELSH" 0,
+        "ELXP" 0;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #000; */
+    position: relative;
+    z-index: 1;
+    /* background-image: linear-gradient(to right, #1f1f1f, #3e3e3e); */
+    /* background-image:radial-gradient() */
+    background: radial-gradient(#424242, #1b1b1b);
+}
+
+#messageBox {
+    border-radius: 15px;
+    text-align: center;
+    font-size: 18px;
+    color: #d6a076;
+    position: relative;
+    z-index: 2;
+}
+
+#messageBox .icon {
+    font-size: 40px;
+}
+
+#messageBox .content {
+    padding: 10px 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    margin-top: 30px;
+}
+
+/* Floating dots animation */
+.bubbles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.bubbles span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgba(201, 142, 142, 0.496);
+    animation: bubble 2s linear infinite;
+    bottom: -150px;
+    border-radius: 50%;
+}
+
+.bubbles span:nth-child(1) {
+    left: 10%;
+    width: 15px;
+    height: 15px;
+    animation-duration: 5s;
+}
+
+.bubbles span:nth-child(2) {
+    left: 20%;
+    width: 25px;
+    height: 25px;
+    animation-duration: 6s;
+    /* animation-delay: 2s; */
+}
+
+.bubbles span:nth-child(3) {
+    left: 35%;
+    animation-duration: 6s;
+    /* animation-delay: 4s; */
+}
+
+.bubbles span:nth-child(4) {
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 5s;
+    /* animation-delay: 1s; */
+}
+
+.bubbles span:nth-child(5) {
+    left: 65%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 7s;
+    /* animation-delay: 3s; */
+}
+
+.bubbles span:nth-child(6) {
+    left: 80%;
+    width: 30px;
+    height: 30px;
+    animation-duration: 10s;
+    /* animation-delay: 5s; */
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .bitcount-grid-double {
+        font-size: 36px;
+    }
+
+    #messageBox .icon {
+        font-size: 30px;
+    }
+
+    #messageBox .content {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    #messageBox {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bitcount-grid-double {
+        font-size: 28px;
+    }
+
+    #messageBox .icon {
+        font-size: 24px;
+    }
+
+    #messageBox .content {
+        font-size: 15px;
+    }
+}
